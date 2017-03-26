@@ -36,7 +36,7 @@
 	<div class="section" id="section1">
 		<div class="content">
 		<div class='wrap'>
-			<form class='userinput' name='userinput' method='get' action='search_proc.jsp'>
+			<form class='userinput' name='userinput' method='get' action='search_proc.jsp' target='_blank'>
 				<div><section><h1>기장</h1></section><input type='number' name='Length'></div>
 				<div><section><h1>허리</h1></section><input type='number' name='Waist'></div>
 				<div><section><h1>허벅지</h1></section><input type='number' name='Thigh'></div>

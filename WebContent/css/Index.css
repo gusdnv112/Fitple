@@ -157,7 +157,7 @@ abbr, acronym {
 	background-image: url(../img/section_bg.jpg);
 	background-position: center center;
 	background-size: cover;
-	opacity: 0.3;
+	opacity: 0.6;
 
 }
 .wrap {
@@ -185,16 +185,20 @@ abbr, acronym {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	text-align: center;
 }
 .userinput div section {
 	color: #fff;
-	font-size: 10px;
+	font-size: 15px;
 }
 
 .userinput div input {
 	position: relative;
 	width: 150px;
 	height: 30px;
+}
+.userinput div input.focus {
+	border: solid 5px #fff;
 }
 #section1 .content .wrap .inputbtn .searchbtn {
 	margin-top: 10px;
