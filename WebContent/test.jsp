@@ -10,21 +10,28 @@
 <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
 <meta name="Resource-type" content="Document" />
 <link rel="stylesheet" type="text/css" href="js/javascript.fullPage.css" />
-<link rel="stylesheet" type="text/css" href="css/Index.css" />
+<link rel="stylesheet" type="text/css" href="css/Index.css?ver=1" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/javascript.fullPage.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="js/scroll.js?ver=1"></script>
 </head>
 <body id='body'>
-<div id='header'>
-		<div id='menu1' class='menu1'>
-		</div>
-		<a href='test.jsp'><div class='logo'>
-		</div></a>
-		<div id='menu2' class='menu2'>
+	<div id='header'>
+	
+		<div class='header_main'>
+			<a href='test.jsp'>
+				<div class='logo'></div>
+			</a>
+			<div id='menu1' class='menu1'></div>
+			<div id='menu2' class='menu2'></div>
 		</div>
 		
+		<div class='header_login'>
+			<div>
+				<a href='#3rdPage'><h3>Join</h3></a>
+			</div>
+		</div>
 	</div>
 
 <div id="fullpage">
@@ -36,7 +43,7 @@
 	<div class="section" id="section1">
 		<div class="content">
 		<div class='wrap'>
-			<form class='userinput' name='userinput' method='get' action='search_proc.jsp' target='_blank'>
+			<form class='userinput' name='userinput'>
 				<div><section><h1>±âÀå</h1></section><input type='number' name='Length'></div>
 				<div><section><h1>Çã¸®</h1></section><input type='number' name='Waist'></div>
 				<div><section><h1>Çã¹÷Áö</h1></section><input type='number' name='Thigh'></div>
@@ -44,10 +51,10 @@
 				<div><section><h1>¹Ø´Ü</h1></section><input type='number' name='Hem'></div>	
 				
 				<div class='inputbtn'>
-				<button class='searchbtn' type='submit' name='search'>Search</button>
+				<input type='button' class='searchbtn' name='search' value='Search' onclick='result_popup()'/>
 				</div>
-				</form>
-			</div>
+			 </form>
+		</div>
 		</div>
 	</div>
 	<%if(session.getAttribute("id")== null){ %>
@@ -63,13 +70,7 @@
 		</form>
 		</div>
 		</div>
-			<div class='co_content'>
-			
-				<p>&nbsp</p>
-				<p>&nbsp</p>
-				<p>&nbsp</p>
-				<p>&nbsp</p>
-			
+			<div class='co_content'> 
 			<div class='bottom'>
 				<div class='login'></div>
 				<div class='findid'></div>
@@ -119,6 +120,20 @@
 		css3:true
 	});
 
+</script>
+
+<script>
+	function result_popup() {
+	var Length = document.getElementsByName('Length')[0].value;
+	var Waist = document.getElementsByName('Waist')[0].value;
+	var Thigh = document.getElementsByName('Thigh')[0].value;
+	var Crotch = document.getElementsByName('Crotch')[0].value;
+	var Hem = document.getElementsByName('Hem')[0].value;
+	
+	var url = 'search_proc.jsp?Length='+Length+'&Waist='+Waist+'&Thigh='+Thigh+'&Crotch='+Crotch+'&Hem='+Hem;
+	
+	window.open( url, "idcheck", "top=200, left=200, toolbar=no, menubar=no, scrollbars=yes, resizable=yes, width=800, height=500" );
+	}
 </script>
 
 </body>
