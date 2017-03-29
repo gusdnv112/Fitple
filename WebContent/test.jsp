@@ -10,11 +10,11 @@
 <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
 <meta name="Resource-type" content="Document" />
 <link rel="stylesheet" type="text/css" href="js/javascript.fullPage.css" />
-<link rel="stylesheet" type="text/css" href="css/Index.css?ver=1" />
+<link rel="stylesheet" type="text/css" href="css/Index.css?ver=2" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/javascript.fullPage.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/scroll.js?ver=1"></script>
+<script type="text/javascript" src="js/scroll.js?ver=2"></script>
 </head>
 <body id='body'>
 	<div id='header'>
@@ -60,24 +60,31 @@
 	<%if(session.getAttribute("id")== null){ %>
 	<div class="section" id="section2">
 		<div class="content">
-		<div id='box' class='loginbox'>
-		<span class='login__close'>&#x2715;</span>
-		<div class='login_content'>
-		<form name='userinput' method='get' action='login.jsp'>
-		<p>아이디 : <input type='text' name='id'></p>
-		<p>비밀번호 : <input type='text' name='pw'></p>
-		<button type='submit'>로그인</button>
+		<form class="form1" name='userinput' method='get' action='login.jsp'>
+			<div class="wrap">
+				<div class="login_mark">
+					<img src="./img/Fitple.png"></img>
+				</div>
+				<div class='login_info'>
+					<div class='info_id'>
+						<input type='text' name='id' placeholder='ID'>
+					</div>
+					<div class='info_pw'>
+						<input type='text' name='pw' placeholder='PASSWORD'>
+					</div>
+					<div class='loginbtn'>
+						<button type='submit'>로그인</button>
+					</div>
 		</form>
+		<form class="form2" action='signup.jsp'>
+					<div class='signupbtn'>
+						<button type='submit'>회원가입</button>
+					</div>
+		</form>
+				
+				</div>
+			</div>	
 		</div>
-		</div>
-			<div class='co_content'> 
-			<div class='bottom'>
-				<div class='login'></div>
-				<div class='findid'></div>
-			</div>
-			</div>
-	
-	</div>
 	</div>
 	<%}else{ %>
 	<div class="section" id="section2_a">

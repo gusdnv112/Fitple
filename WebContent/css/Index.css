@@ -176,7 +176,7 @@ abbr, acronym {
 	position: relative;
 	width: 100%;
 	top: 15%;
-	height: 88%;
+	height: 85%;
 	text-align: center;
 	display: flex;
 	flex-direction: row;
@@ -185,10 +185,10 @@ abbr, acronym {
 	background-image: url(../img/section_bg.jpg);
 	background-position: center center;
 	background-size: cover;
-	opacity: 0.6;
+	opacity: 0.8;
 
 }
-.wrap {
+#section1 .content .wrap {
 	position: relative;
 	width: 30%;
 	height: 55%;
@@ -246,113 +246,42 @@ abbr, acronym {
 	position: relative;
 	width: 100%;
 	top: 15%;
-	height: 88%;
+	height: 85%;
 	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 }
-
-#section2 .loginbox {
-	position: absolute;
-	border: 2px solid red;
-	width: 300px;
-	height: 200px;
-	visibility: hidden;
-	top: 200px;
-	display: inline-block;
-}
-
-#section2 .loginbox--active {
-	position: absolute;
-	background-color: white;
-	border: 2px solid red;
-	border-radius: 25px; top : 200px;
-	width: 400px;
-	height: 200px;
-	visibility: visible;
-	display: inline-block;
-	z-index: 50;
-	top: 200px;
-}
-
-.login__close {
-	font-size: 2rem;
-	line-height: 2rem;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	cursor: pointer;
-	padding: 15px;
-	-webkit-transition: color 150ms ease;
-	transition: color 150ms ease;
-	z-index: 44;
-}
-
-.login_content {
-	height: 150px;
-	width: 100%;
+#section2 .content .form1 {
 	position: relative;
-	margin-top: 40px;
+	width: 30%; 
+	height: 55%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.login_info .form2 { 
+	width:100%;
+	height: 50px; 
+}
+.login_mark {
+	margin-bottom: 15px;
+}
+.login_info div {
+	margin-bottom: 5px;
+}
+#section2 .content .wrap input {
+	width:80%;
+	height: 50px; 
 }
 
-.co_content {
-	position: relative;
-	display: inline-block;
-	width: 30%;
-	height: 40%;
-	top: 50%;
-}
-
-.co_content p {
-	margin: 20px 0 0 0;
-}
-
-.co_content p:NTH-CHILD(1) {
-	background: url('../img/3_Sign in/네이버.png') center center no-repeat;
+button {
+	width: 80%;
 	height: 50px;
-	background-size: 500px 50px;
+	background-color: #181818;
+	color: #fff;
+	border: 0 0;
 }
-
-.co_content p:NTH-CHILD(2) {
-	background: url('../img/3_Sign in/트위터.png') center center no-repeat;
-	height: 50px;
-	background-size: 500px 50px;
-	cursor: pointer;
-}
-
-.co_content p:NTH-CHILD(3) {
-	background: url('../img/3_Sign in/페이스북.png') center center no-repeat;
-	height: 50px;
-	background-size: 500px 50px;
-}
-
-.co_content p:NTH-CHILD(4) {
-	background: url('../img/3_Sign in/인스타그램.png') center center no-repeat;
-	height: 50px;
-	background-size: 500px 50px;
-}
-
-#section2 .content .bottom {
-	position: relative;
-	display: inline-block;
-	margin-top: 50px;
-	width: 100%;
-}
-
-#section2 .content .bottom .login {
-	display: inline-block;
-	background: url('../img/3_Sign in/로그인.png') center center no-repeat;
-	width: 200px;
-	height: 50px;
-	cursor: pointer;
-}
-
-#section2 .content .bottom .findid {
-	display: inline-block;
-	background: url('../img/3_Sign in/비밀번호.png') center center no-repeat;
-	width: 300px;
-	height: 50px;
-	cursor: pointer;
-}
-
 #section2_a {
 	
 }
